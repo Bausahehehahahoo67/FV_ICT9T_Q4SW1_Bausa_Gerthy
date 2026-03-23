@@ -31,7 +31,7 @@
 }
 
 body{
-    background-image: url(https://i.imgur.com/yChvSJb.gif);
+    background-image: url(https://i.ytimg.com/vi/pmAfSFodfqo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAwTWCg_mPHtojGTqeQh4jo1sKd9g);
     background-size: cover;
 }
 </style>
@@ -41,28 +41,35 @@ body{
 <body>
 
 <div class="deez" id="deez">
-  <h1 class="mb-4 text-white">Temperature Checker</h1>
+  <h1 class="mb-4 text-white">Login to Account</h1>
 
   <button class="btn btn-light mb-3" data-bs-toggle="collapse" data-bs-target="#instructions">Show Instructions</button>
 
   <div class="collapse mb-3" id="instructions">
       <div class="card card-body">
-         <p>Please enter the temperature and the relative humidity in each box, then click the "check temperature" button to calculate.</p>
+         <p>Please enter your username and password to log in.</p>
       </div>
   </div>
 
   <div id="form-box">
-    <input type="text" class="form-control" id="Temperature" placeholder="Enter your Temp in °C">
-    <input type="text" class="form-control" id="Humidity" placeholder="Enter your %RH">
-    <button class="btn btn-info w-100 mt-2" onclick="checkTemperature()">Check Temperature</button>
+    <input type="text" class="form-control" id="Username" placeholder="Enter your username">
+    <input type="password" class="form-control" id="Password" placeholder="Enter your password">
+    <button class="btn btn-info w-100 mt-2" onclick="checkLogin()">Login</button>
   </div>
 </div>
 
 <script>
-function checkTemperature(){
+function checkLogin(){
+    var username = document.getElementById("Username").value;
+    var password = document.getElementById("Password").value;
 
-var temperature = parseFloat(document.getElementById("Temperature").value);
-var humidity = parseFloat(document.getElementById("Humidity").value);
+    if(username === "admin" && password === "password"){
+        alert("Login successful!");
+    } else {
+        alert("Invalid username or password.");
+    }
+}
+
 
 if(isNaN(temperature)){
    alert("Please enter a valid temperature.");
