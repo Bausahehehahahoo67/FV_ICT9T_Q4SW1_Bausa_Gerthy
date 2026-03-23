@@ -31,7 +31,7 @@
 }
 
 body{
-    background-image: url(https://i.ytimg.com/vi/pmAfSFodfqo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAwTWCg_mPHtojGTqeQh4jo1sKd9g);
+    background-image: url(file:///C:/Users/GERTHY%20BAUSA/Downloads/5.gif);
     background-size: cover;
 }
 </style>
@@ -68,39 +68,6 @@ function checkLogin(){
     } else {
         alert("Invalid username or password.");
     }
-}
-
-
-if(isNaN(temperature)){
-   alert("Please enter a valid temperature.");
-   return;
-}
-
-if(isNaN(humidity)){
-   alert("Please enter a valid humidity.");
-   return;
-}
-
-var HeatIndex = temperature + (0.33 * humidity) - 4;
-
-if(temperature <= 27){
-   alert("You are in the cool zone!");
-}
-else if(temperature <= 32){
-   alert("You are in the warm zone!");
-}
-else if(temperature <= 37){
-   alert("You are in the hot zone!");
-}
-else if(temperature <= 41){
-   alert("You are in the caution zone!");
-}
-else{
-   alert("You are in the danger zone!");
-}
-
-alert("Heat Index: " + HeatIndex.toFixed(1));
-
 }
 </script>
 
